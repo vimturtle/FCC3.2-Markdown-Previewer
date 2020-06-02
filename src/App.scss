@@ -1,0 +1,127 @@
+@import-normalize;
+
+$color: rgb(22, 2, 2);
+$background-color: rgb(214, 202, 223);
+
+body {
+  background-color: $background-color;
+  color: $color;
+  font-family: monospace;
+  overflow: hidden;
+
+  #header {
+    text-align: center;
+  }
+
+  ::selection {
+    background-color: rgb(184, 170, 170);
+  }
+
+  a {
+    color: purple;
+  }
+
+  pre {
+    background-color: rgb(201, 174, 221);
+    font-size: 0.75em;
+    padding: 5px;
+  }
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.3em;
+
+  a {
+    text-decoration: none;
+    color: rgb(24, 2, 27);
+  }
+}
+
+textarea {
+  background-color: $background-color;
+  color: $color;
+  line-height: 2em;
+  font-size: 1.3em;
+  border: none;
+  margin-left: 5px;
+  min-height: 80vh;
+  width: 840px;
+  min-width: 290px;
+  max-width: 1390px;
+  resize: none;
+  scrollbar-width: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+#preview {
+  color: $color;
+  line-height: 1.6em;
+  font-size: 1.2em;
+  max-height: 80vh;
+  overflow-y: scroll;
+  margin-right: 5px;
+  scrollbar-width: none;
+}
+
+#editor,
+#preview {
+  padding: 50px;
+}
+
+// react-split-pane
+.Resizer {
+  background: rgb(15, 0, 0);
+  opacity: 0.15;
+  z-index: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+}
+
+.Resizer:hover {
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.Resizer.horizontal {
+  height: 11px;
+  margin: -5px 0;
+  border-top: 5px solid rgba(255, 255, 255, 0);
+  border-bottom: 5px solid rgba(255, 255, 255, 0);
+  cursor: row-resize;
+  width: 100%;
+}
+
+.Resizer.horizontal:hover {
+  border-top: 5px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+}
+
+.Resizer.vertical {
+  width: 11px;
+  margin: 20px -5px;
+  border-left: 5px solid rgba(255, 255, 255, 0);
+  border-right: 5px solid rgba(255, 255, 255, 0);
+  cursor: col-resize;
+  height: 100%;
+}
+
+.Resizer.vertical:hover {
+  border-left: 5px solid rgba(0, 0, 0, 0.5);
+  border-right: 5px solid rgba(0, 0, 0, 0.5);
+}
+.Resizer.disabled {
+  cursor: not-allowed;
+}
+.Resizer.disabled:hover {
+  border-color: transparent;
+}
