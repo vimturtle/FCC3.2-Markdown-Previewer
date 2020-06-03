@@ -1,6 +1,6 @@
 ### FCC3.1-Markdown-Previewer
 
-Simple Markdown Preview using [Marked.js](https://github.com/markedjs/marked)
+Simple Markdown Preview using [Marked.js](https://github.com/markedjs/marked).
 <br>
 Website: https://markdown-previewer-markedjs.netlify.app
 
