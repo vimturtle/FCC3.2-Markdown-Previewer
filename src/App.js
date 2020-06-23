@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import marked from 'marked';
 import SplitPane from 'react-split-pane';
 import './App.scss';
-import SimpleBar from 'simplebar-react';
-import 'simplebar/dist/simplebar.min.css';
 
 function App() {
   const dummyText = `# Welcome to my React Markdown Previewer!
