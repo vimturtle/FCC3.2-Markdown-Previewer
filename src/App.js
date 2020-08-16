@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import marked from 'marked';
-import SplitPane from 'react-split-pane';
 import './App.scss';
 
 function App() {
@@ -66,27 +65,23 @@ And here. | Okay. | I think we get it.
       <div className='main'>
         <h1 id='header'>Markdown Previewer</h1>
         <span className='links'>
-          [
-          <a href='https://github.com/vimturtle/FCC3.2-Markdown-Previewer'>
-            GitHub
-          </a>
-          ]
+          [<a href='https://github.com/vimturtle/'>GitHub</a>]
         </span>
-        <hr />
-        <SplitPane split='vertical' defaultSize={950} allowResize={false}>
+        <div id='main'>
           <textarea
             id='editor'
             onChange={() =>
               setMarkdown(document.getElementById('editor').value)
             }
+            spellcheck='false'
           >
             {markdown}
           </textarea>
-
           <div className='split' id='preview'>
+            <h2>Preview</h2>
             {marked(markdown, { breaks: true })}
           </div>
-        </SplitPane>
+        </div>
       </div>
     </div>
   );
